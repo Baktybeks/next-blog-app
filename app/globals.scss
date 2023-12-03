@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-bg: #2C2C32;
+  --color-active: #0f7dc6;
+}
+
+html, body {
+  margin: 0 auto;
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+header, footer {
+  background-color: var(--color-bg);
+  padding: 2rem 0;
+  text-align: center;
+  color: white;
+}
+
+header > a {
+  color: white;
+  text-decoration: none;
+  padding: 0 1rem;
+}
+
+header > a:hover {
+  text-decoration: underline;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  text-align: center;
+}
+
+.container {
+  max-width: 900px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin: 0 auto;
+}
+
+main {
+  width: 100%;
+  flex: 1 1 auto;
+
+  a {
+    text-decoration: none;
+    color: var(--color-bg);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.active {
+  color: var(--color-active);
+  cursor: default;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+}
+
+form button {
+  background-color: var(--color-active);
+  cursor: pointer;
+  color: white;
+  border: none;
+}
+
+input[type="search"] {
+  padding: 0.5rem 1rem;
+}
