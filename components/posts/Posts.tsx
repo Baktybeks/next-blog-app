@@ -1,13 +1,21 @@
-import Link from "next/link";
+import Link from 'next/link';
 
-type Props = {
-  posts: any[]
+
+export interface IPost {
+  userId: number;
+  id: number;
+  title: string;
+  body: string;
 }
 
-const Posts = ({posts}: Props) => {
+type Props = {
+  posts: IPost[]
+}
+
+const Posts = ({ posts }: Props) => {
   return (
     <ul>
-      {posts.map((post:any)=>(
+      {posts.map((post:IPost) => (
         <li key={post.id}>
           <Link href={`/blog/${post.id}`}>
             {post.title}
